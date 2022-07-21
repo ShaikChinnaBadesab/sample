@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400;1,600;1,700&family=Radio+Canada:wght@300&family=Recursive:wght@300;400;500;600;700&display=swap");
+
+.main-sec {
+  background-color: black;
+}
+h1 {
+  font-size: 48px;
+  color: whitesmoke;
+}
+h2 {
+  font-size: 32px;
+  color: whitesmoke;
+  font-family: cursive;
+}
+span {
+  color: chartreuse;
+  font-family: "italic" sans-serif;
+  font-weight: 600;
+}
+p {
+  color: whitesmoke;
+}
+.bade1 {
+  border-radius: 50%;
+  background-color: bisque;
+  object-fit: fill;
+  animation: rotation 10s infinite linear;
+}
+
+.btn-cv {
+  border-radius: 50px;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: blueviolet;
+  padding: 12px 24px;
+  font-weight: 500;
+}
+.dwn-cv {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 16px;
+  padding: 12px 24px;
+  font-family: sans-serif;
+}
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+.btn-cv:hover {
+  background-color: brown;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.typed-text {
+  color: white;
+}
+.abt-h1 {
+  font-size: 112px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.ui-h1 {
+  font-size: 32px;
+  color: black;
+  font-family: sans-serif;
+  line-height: 42px;
+  font-weight: 700;
+}
+.abt-para {
+  font-size: 18px;
+  font-family: cursive;
+  font-weight: normal;
+  line-height: 28px;
+  color: black;
+}
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+  line-height: 30px;
+  color: black;
+  display: flex;
+  padding: 16px 0px;
+}
+.lgt-blk {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+.abt-h2-pos {
+  position: absolute;
+  color: cyan;
+  right: 42%;
+  font-size: 42px;
+  font-family: cursive;
+  font-weight: 500;
+  bottom: 56%;
+}
+.my-h2-pos {
+  position: absolute;
+  color: cyan;
+  right: 46%;
+  font-size: 42px;
+  font-family: cursive;
+  font-weight: 500;
+  bottom: 6%;
+}
