@@ -1,147 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <!-- CSS only -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./stle.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400;1,600;1,700&family=Radio+Canada:wght@300&family=Recursive:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="jquery-3.6.0.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  </head>
-  <body
-    class="loaded"
-    data-aos-easing="ease-out-back"
-    data-aos-duration="1000"
-    data-aos-delay="0"
-    cz-shortcut-listen="true"
-    style="position: relative; min-height: 100%; top: 0px;"
-  >
-    <section class="main-sec py-sm-5">
-      <div class="container">
-        <div class="row ds-flex align-items-center">
-          <div class="col-md-7">
-            <h1 class="text-sm">
-              Hello My Name is
-              <span class="text-sm">BADESAB</span>
-            </h1>
-            <h2>
-              I am a
-              <span>UI</span>
-              Devloper
-            </h2>
-            <button class="btn-cv mt-3">
-              <a
-                class="dwn-cv"
-                href="https://drive.google.com/drive/folders/1bbCPH_jKF19rMNXb8GxUR7MqHV0G1Ks0"
-                download="resume"
-              >
-                Download CV
-              </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Swarnalatha</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Swarnalatha</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img class="rounded-image" src="./images/passportsize-photo-1.jpg" alt="Swarnalatha profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Swarnalatha</h1>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('swarna-resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./images/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/swarnalatha-kandimalla-6498801b2/'" />
+        <img src="./images/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./images/profile-pic2.jpeg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./images/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2 years <br />Frontend Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./images/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Tech</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I am a front end web developer, I can provide clean code and pixel perfect design, I also make the website
+            more & more interactive Committed professional offering 2 years of experience in the field of web
+            application development. Excellent
+            communication skills and a consistent team player in all sorts of environments. Seeking to
+            expand talents by bringing a wealth of expertise to a well-established company.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Responsive design</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Tailwind css</h3>
+                <p>basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Manual Testing</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./images/project-2-logo.svg" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://narayanaone.health/'">
+              Live Demo
             </button>
           </div>
-          <div class="col-md-4 offset-sm-1">
-            <img
-              class="bade1"
-              src="images\bade.jpg"
-              alt="Badesab"
-              width="100%"
-            />
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- about section -->
-    <section class="about-main py-sm-5">
-      <div class="container">
-        <h1 class="abt-h1 py-sm-5 text-sm text-8xl">ABOUT ME</h1>
-        <h2 class="abt-h2-pos text-sm">About Me</h2>
-        <div class="row align-items-center ds-flex">
-          <div class="col-md-5">
-            <!-- <img class="" src="images\bade.jpg" alt="Badesab" width="100%" /> -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./images/project-1-logo.svg" alt="Project 1" class="project-img" />
           </div>
-          <div class="col-md-6">
-            <h1 class="ui-h1 text-sm">UI Devloper</h1>
-            <p class="abt-para">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-              omnis odio aliquid, dignissimos recusandae cumque tenetur
-              voluptatem voluptate quod, labore tempore molestias corporis.
-              Facere saepe sunt est adipisci veniam voluptatem.
-            </p>
-            <div class="row">
-              <div class="col-md-5">
-                <div class="name">
-                  Name:
-                  <span class="lgt-blk">Badesab</span>
-                </div>
-                <div class="name">
-                  Degree:
-                  <span class="lgt-blk">B.Tech</span>
-                </div>
-                <div class="name">
-                  Phone:
-                  <span class="lgt-blk">
-                    8886474098
-                  </span>
-                </div>
-                <div class="name">
-                  Address:
-                  <span class="lgt-blk">
-                    Kurnool,Andhra,
-                    <br />
-                    INDIA.
-                  </span>
-                </div>
-              </div>
-              <div class="offset-sm-1 col-md-5">
-                <div class="name">
-                  Birthday:
-                  <span class="lgt-blk">08-July-1999</span>
-                </div>
-                <div class="name">
-                  Experience:
-                  <span class="lgt-blk">11 Months</span>
-                </div>
-                <div class="name">
-                  Email:
-                  <span class="lgt-blk">sbadesab1999@gmail.com</span>
-                </div>
-                <div class="name">
-                  Freelance:
-                  <span class="lgt-blk">Available</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- my skills section -->
-    <section class="my-skills">
-      <div class="container">
-        <h1 class="abt-h1 py-sm-5">MY SKILLS</h1>
-        <h2 class="my-h2-pos">My Skills</h2>
-        <div class="row">
-          <div class="col-md-7">
-            <div class="progress-bar bg-primary"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
 
-    <script src="./java1.js"></script>
-  </body>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://ndrkfgc.edu.in/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./images/project-3-logo.svg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://docquity.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./images/project-4-logo.svg" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Four</h2>
+          <div class="btn-container">
+
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://drkpharma.edu.in/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./images/project-2-logo.svg" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Project Five</h2>
+          <div class="btn-container">
+
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://narayanaone.health/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <img src="./images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:swarnakandimalla466@gmail.com">Example@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/swarnalatha-kandimalla-6498801b2/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer class="foot-sec">
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Swarnalatha. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
